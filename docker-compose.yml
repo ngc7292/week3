@@ -1,0 +1,17 @@
+server:
+  restart: always
+  image: nginx
+  volumes:
+    - ./nginx/nginx_flask.conf:/etc/nginx/conf.d/flask_demo.conf
+  links:
+    - web
+  ports:
+    - "8765:8765"
+
+web:
+  restart: always
+  image: ngc7293/jinja_ssl:0.1
+  working_dir: /home/project/jinja
+  expose:
+    - "8765"
+  command: python /home/project/jinja/demo.py

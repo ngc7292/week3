@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ngc's blog</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        div{
+            height: auto;
+        }
+        .head{
+            height: 50px;
+            width: 100%;
+        }
+        .head .left{
+            float: left;
+            left: 20px;
+        }
+        .head .right{
+            float: right;
+        }
+        .head .right >div{
+            text-align: center;
+            top: 10px;
+        }
+        .body{
+            z-index: 50;
+            bottom: 400px;
+        }
+        .body .welcome{
+            height: 130px;
+            top:10px;
+        }
+        .body .welcome >h1{
+            text-align: center;
+            margin-top: 10px;
+        }
+        .body .lovly >p{
+            text-align: center;
+        }
+        .home-img{
+            height: 500px;
+            width: 80%;
+            text-align: center;
+            margin: auto;
+            display: table-cell;
+        }
+
+        .tail {
+            background: #ffffff;
+            z-index: 100;
+            position: fixed;
+            bottom: 10px;
+        }
+        .tail >p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="head container">
+    <div class="left row">
+        <h1>ngc7293</h1>
+    </div>
+    <div class="right row">
+        <div class="col-sm"><a href="#welcome">welcome</a></div>
+        <div class="col-sm"><a href="#home">home</a></div>
+        <div class="col-sm"><a href="#lovly">lovly</a></div>
+        <div class="col-sm"><a href="#about">about</a></div>
+    </div>
+</div>
+<div class="body container-fluid">
+    <div class="welcome" id="welcome">
+        <h1>welcome {{ name }}</h1>
+    </div>
+    <div class="home" id="home">
+        <img class="home-img" src="http://p1kaloi2x.bkt.clouddn.com/ngc1.jpg">
+    </div>
+    <div class="lovly" id="lovly">
+        <p>我 永远喜欢 <del>小樱</del> <del>维尔利特</del> <del> 天衣</del> 嘿嘿</p>
+    </div>
+    <div class="about" id="about">
+        <p>
+            hint: flag in flag!!!
+        </p>
+    </div>
+</div>
+<div class="tail container-fluid">
+    <p>copyright@ngc7293</p>
+</div>
+</body>
+</html>
