@@ -8,6 +8,7 @@ app = Flask(__name__)
 @app.route('/login')
 @app.route('/hello')
 @app.route('/hello/<name>')
+@app.route('/index')
 def hello(name='ngc'):
     return render_template('index.html', name=name)
 
@@ -24,4 +25,4 @@ def page_not_found(e):
     return render_template_string(template), 404
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0")

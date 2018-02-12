@@ -6,12 +6,12 @@ server:
   links:
     - web
   ports:
-    - "8765:8765"
+    - "5000:5000"
 
 web:
   restart: always
-  image: ngc7293/jinja_ssl:0.1
+  image: ngc7293/jinja_ssl:0.2
   working_dir: /home/project/jinja
   expose:
-    - "8765"
+    - "5000"
   command: python /home/project/jinja/demo.py
